@@ -38,7 +38,13 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+}
 
+.description{
+    text-align: center;
+    width: 500px;
+    color: #384942;
+    margin-left:29%;
 }
 
 .get-started {
@@ -86,9 +92,12 @@ main {
 
 .link-card {
     padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     border: 0.5px solid transparent;
     transition: all ease-in-out 50ms;
-    cursor: pointer;
+    width:inherit;
 }
 
 .link-card:hover {
