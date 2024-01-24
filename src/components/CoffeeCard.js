@@ -1,28 +1,42 @@
 import React from "react";
+import { FaStar } from "react-icons/fa6";
 //import Coffees from "../data.json";
 
 const CoffeeCard = ({coffee}) => {
 
   return (
-    <div className="link-card" key={coffee.id}>
+    <li className="link-card" key={coffee.id}>
       {
         coffee.image && 
         <div>
-          <figure>
-            <p className="popular">{coffee.popular ? 'Popular' : 'Unpopular'}</p>
-            <img src= {coffee.image} alt={coffee.name}></img>
-          </figure>
-          <div>
+          { coffee.popular ?(
+            <figure>
+              <p className="popular">{coffee.popular ? 'Popular' : ''}</p>
+              <img src= {coffee.image} alt={coffee.name}></img>
+            </figure>
+          ) : (
+            <figure>
+              <img src= {coffee.image} alt={coffee.name}></img>
+            </figure>
+          )
+          }
+          <div className="section1">
             <h3>{coffee.name}</h3>
             <p>{coffee.price}</p>
           </div>
-          <div>
-            <p>{coffee.rating} ({coffee.votes} votes)</p>
-            <p>{coffee.available ? 'Available' : 'Sold out'}</p>
+          <div className="section2">
+          {coffee.rating === 0 ? (
+            <p> <FaStar /> No Rating</p>
+          ) : (
+            <p>
+              <FaStar color="yellow"/> {coffee.rating} {coffee.votes && `(${coffee.votes} votes)`}
+            </p>
+          )}
+            <p>{coffee.available ? '' : 'Sold out'}</p>
           </div>
         </div>
       }   
-    </div>
+    </li>
   );
 
     // <div>

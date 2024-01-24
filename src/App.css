@@ -43,7 +43,7 @@ header {
 .description{
     text-align: center;
     width: 500px;
-    color: #384942;
+    color: #587569;
     margin-left:29%;
 }
 
@@ -89,12 +89,44 @@ main {
     display: none;
 }
 
+.coffeeList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.section1{
+    /* display: inline-flex; */
+    margin-bottom: 10px;
+}
+
+.section2{
+    /* display: inline-flex; */
+}
+
+figure{
+    position: relative;
+}
+
+figure img {
+    border-radius: 15px;
+}
+
+figure p {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(233, 218, 85);
+    color:#020617;
+    font-weight:500;
+    font-size: 10px;
+}
 
 .link-card {
     padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    list-style-type: none;
     border: 0.5px solid transparent;
     transition: all ease-in-out 50ms;
     width:inherit;
