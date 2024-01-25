@@ -1,171 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap");
 
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #020617;
+  color: #cbd5e1;
+  font-family: "Sora", sans-serif;
+  line-height: 1.5;
+  background-image: radial-gradient(#0f172a 1px, transparent 0),
+    radial-gradient(#0f172a 1px, transparent 0);
+  background-position: 0 0, 25px 25px;
+  background-attachment: fixed;
+  background-size: 50px 50px;
+  overflow-x: hidden;
+  padding: 4rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.description{
-    text-align: center;
-    width: 500px;
-    color: #587569;
-    margin-left:29%;
+.description {
+  text-align: center;
+  width: 500px;
+  color: #587569;
+  margin-left: 29%;
 }
 
 .get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+  padding: 1rem 2rem;
+  border: 0.5px solid #1e293b;
+  background-color: #94a3b817;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+  width: 100%;
+  text-align: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  column-gap: 1.5rem;
 }
 
 .title {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .title::after {
-    content: "";
-    background: url('../public/images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+  content: "";
+  background: url("../public/images/blur-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -130px;
+  right: -75px;
+  width: 500px;
+  height: 250px;
+  opacity: 0.5;
 }
 
 .logo {
-    display: none;
+  display: none;
 }
 
-.coffeeList{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+.coffeeList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
-.section1{
-    /* display: inline-flex; */
-    margin-bottom: 10px;
+/*-------------------------------Card Section-------------------------------*/
+
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.section2{
-    /* display: inline-flex; */
+.section2 {
+  display: flex;
+  justify-content: space-between;
 }
 
-figure{
-    position: relative;
+figure {
+  position: relative;
 }
 
 figure img {
-    border-radius: 15px;
+  border-radius: 15px;
+  /* width: 100%;
+    height: 100%; */
 }
+
+
 
 figure p {
-    position: absolute;
-    top: 5%;
-    left: 3%;
-    padding: 5px;
-    border-radius: 15px;
-    background-color: rgb(233, 218, 85);
-    color:#020617;
-    font-weight:500;
-    font-size: 10px;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgb(233, 218, 85);
+  color: #020617;
+  font-weight: 500;
+  font-size: 10px;
 }
 
+.section1 > p{
+  background-color:#a0c0b3;
+  color: #020617;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  padding: 0 10px;
+}
+
+.section2 p:nth-of-type(2){
+  color: rgb(177, 101, 57);
+  font-weight: bold;
+  text-align: right;
+}
+
+.section2 > p:nth-of-type(1){
+  align-items: center;
+  display: flex;
+}
+
+/* table .section1 td:nth-of-type(2) {
+  background-color:#a0c0b3;
+  color: #020617;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  text-align: right;
+  padding: 0 12px;
+  width: 71px;
+}
+
+table > .section2 > td:nth-of-type(2) {
+  color: brown;
+  font-weight: bold;
+  text-align: right;
+} */
+
 .link-card {
-    padding: 1rem;
-    list-style-type: none;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    width:inherit;
+  padding: 1rem;
+  list-style-type: none;
+  border: 0.5px solid transparent;
+  transition: all ease-in-out 50ms;
+  width: inherit;
 }
 
 .link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
-}
-
-.link-title {
-    font-size: 1.125rem;
-}
-
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
+  border: 0.5px solid #1e293b;
+  background-color: #94a3b817;
+  border-radius: 8px;
 }
 
 @media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
+  .logo {
+    display: initial;
   }
+
+  .get-started {
+    width: auto;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}

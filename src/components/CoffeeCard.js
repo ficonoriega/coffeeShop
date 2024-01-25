@@ -8,7 +8,7 @@ const CoffeeCard = ({coffee}) => {
     <li className="link-card" key={coffee.id}>
       {
         coffee.image && 
-        <div>
+        <div className="card">
           { coffee.popular ?(
             <figure>
               <p className="popular">{coffee.popular ? 'Popular' : ''}</p>
@@ -25,15 +25,31 @@ const CoffeeCard = ({coffee}) => {
             <p>{coffee.price}</p>
           </div>
           <div className="section2">
-          {coffee.rating === 0 ? (
-            <p> <FaStar /> No Rating</p>
-          ) : (
-            <p>
-              <FaStar color="yellow"/> {coffee.rating} {coffee.votes && `(${coffee.votes} votes)`}
-            </p>
-          )}
-            <p>{coffee.available ? '' : 'Sold out'}</p>
+            {coffee.rating === 0 ? (
+              <p> <FaStar /> No Rating</p>
+            ) : (
+              <p>
+                <FaStar color="yellow" fontSize={24} style={{ marginRight: '8px' }}/> {coffee.rating} {coffee.votes && `(${coffee.votes} votes)`}
+              </p>
+            )}
+              <p>{coffee.available ? '' : 'Sold out'}</p>
           </div>
+          {/* <table>
+            <tr className="section1">
+              <td><h3>{coffee.name}</h3></td>
+              <td>{coffee.price}</td>
+            </tr>
+            <tr className="section2">
+            {coffee.rating === 0 ? (
+            <td> <FaStar /> No Rating</td>
+          ) : (
+            <td>
+              <FaStar color="yellow"/> {coffee.rating} {coffee.votes && `(${coffee.votes} votes)`}
+            </td>
+          )}
+            <td>{coffee.available ? '' : 'Sold out'}</td>
+            </tr>
+          </table> */}
         </div>
       }   
     </li>
