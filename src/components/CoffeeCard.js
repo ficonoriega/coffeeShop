@@ -29,7 +29,7 @@ const CoffeeCard = ({coffee}) => {
               <p> <FaRegStar color="grey" fontSize={24} style={{ marginRight: '8px' }}/> <span className="ratingDetails">No ratings</span></p>
                 ) : (
               <p>
-                <FaStar color="yellow" fontSize={24} style={{ marginRight: '8px' }}/>
+                <FaStar color="#F5C769" fontSize={24} style={{ marginRight: '8px' }}/>
                 {coffee.rating} {coffee.votes && <spam className="ratingDetails">({coffee.votes} votes) </spam>}
               </p>
             )}
