@@ -6,7 +6,7 @@ import FilterButtons from './components/FilterButtons';
 
 function App() {
 
-  // const [item, setItem] = useState(coffeeData)
+  const [item, setItem] = useState(coffeeData);
 
   return(
     <section className='hero'>
@@ -16,11 +16,7 @@ function App() {
           <p className='description'>Introducing a Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
         </div>
         <FilterButtons className="allProductButton"/>
-        <ul className='coffeeList'>
-          {coffeeData.map(coffee => (
-            <CoffeeCard key={coffee.id} coffee={coffee} />
-          ))}
-        </ul>
+        <CoffeeCard coffee={item} />
       </div>
     </section>
     

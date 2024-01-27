@@ -1,9 +1,7 @@
 import React from 'react';
-import coffeeData from "../assets/json/data.json";
+// import coffeeData from "../assets/json/data.json";
 
-const FilterButtons = ({setCoffee}) => {
-
-  const availCoffee = [...new Set(coffeeData.map((coffee) => coffee.available))];
+const FilterButtons = ({setItem, availCoffee}) => {
 
   return (
     <div className='buttonsClass'>
