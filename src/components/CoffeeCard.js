@@ -3,7 +3,6 @@ import { FaStar } from "react-icons/fa6";
 import { FaRegStar } from "react-icons/fa";
 
 const CoffeeCard = ({coffee}) => {
-
   return(
     <ul className='coffeeList'>
       {coffee.map((Val) =>{
@@ -46,5 +45,6 @@ const CoffeeCard = ({coffee}) => {
     </ul>
   )
 }
+
 
 export default CoffeeCard;

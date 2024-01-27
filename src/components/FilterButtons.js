@@ -1,14 +1,11 @@
 import React from 'react';
-// import coffeeData from "../assets/json/data.json";
 
-const FilterButtons = ({setItem, availCoffee}) => {
-
+const FilterButtons = ({ filterAvailableCoffee, filterAllCoffee }) => {
   return (
     <div className='buttonsClass'>
-      <button type="button">All Products</button>
-      <button type="button">Available Now</button>
+      <button type="button" onClick={filterAllCoffee}>All Products</button>
+      <button type="button" onClick={filterAvailableCoffee}>Available Now</button>
     </div>
-    
   );
 };
 

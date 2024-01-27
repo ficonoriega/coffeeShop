@@ -1,22 +1,36 @@
 import './App.css';
 import React, { useState } from 'react';
-import coffeeData from "./assets/json/data.json";
+import initialCoffeeData from "./assets/json/data.json";
 import CoffeeCard from './components/CoffeeCard';
 import FilterButtons from './components/FilterButtons';
+import Header from './components/Header';
 
 function App() {
 
-  const [item, setItem] = useState(coffeeData);
+  const [coffeeData, setCoffeeData] = useState(initialCoffeeData);
+  const [filteredCoffee, setFilteredCoffee] = useState(coffeeData);
+
+  // All products button
+  const filterAllCoffee = () => {
+    const allCoffee = coffeeData.filter(coffee => coffee.available || !coffee.available);
+    setFilteredCoffee(allCoffee);
+  };
+
+  // Available Now button
+  const filterAvailableCoffee = () => {
+    const availableCoffee = coffeeData.filter(coffee => coffee.available);
+    setFilteredCoffee(availableCoffee);
+  };
 
   return(
     <section className='hero'>
       <div className='content'>
-        <div className='header'>
-          <h1 className="title">Our Collection</h1>
-          <p className='description'>Introducing a Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.</p>
-        </div>
-        <FilterButtons className="allProductButton"/>
-        <CoffeeCard coffee={item} />
+        <Header/>
+        <FilterButtons className="allProductButton"
+        filterAllCoffee={filterAllCoffee}
+        filterAvailableCoffee={filterAvailableCoffee}
+        />
+        <CoffeeCard coffee={filteredCoffee} />
       </div>
     </section>
     
