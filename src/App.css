@@ -89,15 +89,29 @@ body {
 /*-------------------------------------------------------------------------*/
 /*----------------------------------BUTTONS--------------------------------*/
 
-.buttons{
+.buttonsClass{
   display: flex;
   flex-direction: row;
-  gap: 3vh;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0 20px 0;
+  gap: 2vh;
 }
 
-.allProductButton{
-  
+button{
+  all:unset;
+  background-color: #6e757d;
+  color: #fef7ed;
+  border-radius: 9px;
+  width: 17vh;
+  padding: 1.25vh 6px;
+  text-align: center;
+  font-size: inherit;
+}
+
+button:hover{
+  background-color: #94a3b817;
+  transition: 100ms;
 }
 
 /*-------------------------------------------------------------------------*/
