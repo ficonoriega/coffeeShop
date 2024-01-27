@@ -33,8 +33,6 @@ function App() {
         <CoffeeCard coffee={filteredCoffee} />
       </div>
     </section>
-    
-    
   );
 }
 export default App;

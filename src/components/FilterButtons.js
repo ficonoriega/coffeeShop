@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterButtons = ({ filterAvailableCoffee, filterAllCoffee }) => {
+const FilterButtons = ({ filterAllCoffee, filterAvailableCoffee }) => {
   return (
     <div className='buttonsClass'>
       <button type="button" onClick={filterAllCoffee}>All Products</button>
