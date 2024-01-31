@@ -100,7 +100,7 @@ body {
 
 button{
   all:unset;
-  background-color: #6e757d;
+  
   color: #fef7ed;
   border-radius: 9px;
   width: 17vh;
@@ -110,8 +110,12 @@ button{
 }
 
 button:hover{
-  background-color: #94a3b817;
-  transition: 100ms;
+  background-color: #6e757d;
+  transition: 10ms;
+}
+
+.clicked{
+  background-color: #6e757d;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -200,7 +204,6 @@ figure p {
 }
 
 /*-------------------------------------------------------------------------*/
-
 /*-------------------------------RESPONSIVE CSS----------------------------*/
 
 @media screen and (min-width: 720px) {
@@ -222,37 +225,3 @@ figure p {
     gap: 1rem;
   }
 }
-
-/*-------------------------------------------------------------------------*/
-/*---------------------------------UNUSED CSS------------------------------*/
-
-/* .get-started {
-  padding: 1rem 2rem;
-  border: 0.5px solid #1e293b;
-  background-color: #94a3b817;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 200;
-  width: 100%;
-  text-align: center;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 0.5rem;
-  column-gap: 1.5rem;
-}
-
-.logo {
-  display: none;
-} 
-
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-*/
