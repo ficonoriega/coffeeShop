@@ -27,7 +27,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   background: #121315;
-  color: #cbd5e1;
+  color: #fef7ed;
   font-family: "Sora", sans-serif;
   line-height: 1.5;
   background-image: url("../src/assets/images/bg-cafe.jpg");
@@ -78,6 +78,7 @@ body {
 
 .description {
   font-size: 14px;
+  font-weight: 550;
   margin: 1vh 0;
   max-width: 80vh;
   text-align:justify;
@@ -122,7 +123,8 @@ button:hover{
 .coffeeList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 1.5rem 0.5rem;
+  margin-bottom: 8vh;
 }
 
 .section1 {
@@ -152,18 +154,18 @@ figure p {
   position: absolute;
   top: 5%;
   left: 3%;
-  padding: 0.2rem 1rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 10px;
   background-color: #F5C769;
   color: #020617;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.8rem;
 }
 
 .section1 > p{
   background-color:#BDE3CC;
   color: #020617;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
   border-radius: 5px;
   align-items: center;
@@ -180,6 +182,7 @@ figure p {
 .section2 > p:nth-of-type(1){
   align-items: center;
   display: flex;
+  font-size: small;
 }
 
 .ratingDetails{
@@ -201,29 +204,98 @@ figure p {
   border-radius: 8px;
 }
 
+.card > .section1 > h3{
+  font-size: medium;
+  font-weight: 450;
+}
+
 /*-------------------------------------------------------------------------*/
 /*-------------------------------RESPONSIVE CSS----------------------------*/
 
-@media screen and (min-width: 1280px) {
-
+/* For screens smaller than 750px */
+@media (max-width: 751px) {
   /*--------------------------BODY-----------------------*/
   .hero{
-    height: 63rem;
+    height: 100%;
   }
 
   .content{
+    width:75%;
+    margin-top: 6vh;
+  }
 
+  /*------------------------HEADER------------------------*/
+  .description{
+    max-width: 60vh;
+    text-align:center;
+    text-align-last: center;
+  }
+
+  /*--------------------------CARDS----------------------*/
+  .coffeeList {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 8vh;
+  }
+
+}
+
+/* For screens between 751px and 1024px */
+@media (min-width: 751px) and (max-width: 1024px) {
+  /*--------------------------BODY-----------------------*/
+  .hero{
+    height: 75rem;
+  }
+
+  .content{
+    width: 80%;
+    margin-top: 11vh;
+  }
+
+  /*------------------------HEADER------------------------*/
+  .description{
+    max-width: 75vh;  
+  }
+
+  /*--------------------------CARDS----------------------*/
+  .coffeeList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.01rem;
+    margin-bottom: 8vh;
   }
 }
 
-@media screen and (min-width: 1024px) {
-
+/* For screens between 1025px and 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
   /*--------------------------BODY-----------------------*/
   .hero{
-    height: 63rem;
+    height: 75rem;
   }
 
   .content{
+    width: 80%;
+    margin-top: 11vh;
+  }
+  /*------------------------HEADER------------------------*/
+  .description{
+    max-width: 75vh;  
+  }
 
+  /*--------------------------CARDS----------------------*/
+  .coffeeList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.01rem;
+    margin-bottom: 8vh;
+  }
+}
+
+/* For screens larger than 1280px */
+@media (min-width: 1281px) {
+  /*--------------------------BODY-----------------------*/
+  .hero{
+    height: 63rem;
   }
 }

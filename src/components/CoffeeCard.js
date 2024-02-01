@@ -28,10 +28,10 @@ const CoffeeCard = ({coffee}) => {
                 </div>
                 <div className="section2">
                   {Val.rating === null ? (
-                    <p> <FaRegStar color="grey" fontSize={24} style={{ marginRight: '8px' }}/> <span className="ratingDetails">No ratings</span></p>
+                    <p> <FaRegStar color="grey" fontSize={20} style={{ marginRight: '8px' }}/> <span className="ratingDetails">No ratings</span></p>
                       ) : (
                     <p>
-                      <FaStar color="#F5C769" fontSize={24} style={{ marginRight: '8px' }}/>
+                      <FaStar color="#F5C769" fontSize={20} style={{ marginRight: '8px' }}/>
                       {Val.rating} {Val.votes && <spam className="ratingDetails">({Val.votes} votes) </spam>}
                     </p>
                   )}
