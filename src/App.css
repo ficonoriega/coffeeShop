@@ -70,14 +70,15 @@ body {
 }
 
 .title {
-  font-size: 30px;
+  font-size: 4vh;
   font-weight: 450;
   position: relative;
   text-align: center;
+  margin: 0 3vh;
 }
 
 .description {
-  font-size: 14px;
+  font-size: 2.3vh;
   font-weight: 550;
   margin: 1vh 3vh;
   max-width: 80vh;
@@ -96,6 +97,8 @@ body {
   align-items: center;
   padding: 10px 0 20px 0;
   gap: 2vh;
+  font-size: 2.25vh;
+  text-align: center;
 }
 
 button{
@@ -104,8 +107,6 @@ button{
   border-radius: 9px;
   width: 17vh;
   padding: 1.25vh 6px;
-  text-align: center;
-  font-size: 2.25vh;
 }
 
 button:hover{
@@ -215,12 +216,48 @@ figure p {
 /* For screens smaller than 480px */
 
 @media (max-width: 480px) {
+  /*--------------------------BODY-----------------------*/
+  .content{
+    width:75%;
+    margin-top: 5vh;
+  }
+  /*------------------------HEADER------------------------*/
+  .description{
+    max-width: 60vh;
+    text-align:center;
+    text-align-last: center;
+  }
+  /*-------------------------BUTTONS-----------------------*/
+  button{
+    width:auto;
+    padding: 1.25vh 6px;
+  }
+  .buttonsClass{
+    font-size: 2vh;
+  }
   /*--------------------------CARDS----------------------*/
+  .link-card{
+    padding: 1.5rem;
+  }
   .coffeeList {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    margin-bottom: 8vh;
+    gap: 0.3rem;
+    margin-bottom: 7vh;
+  }
+  .section1, .section2{
+    flex-direction: column;
+  }
+  .section1 > p {
+    width: 25%;
+    justify-content: center;
+  }
+  .section2 p:nth-of-type(2){
+    text-align: left;
+    font-size: 70%;
+  }
+  .section2 > p:nth-of-type(1) {
+    font-size: x-small;
   }
 }
 
